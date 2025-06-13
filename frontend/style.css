@@ -1,0 +1,43 @@
+.nav-link {
+  position: relative;
+  padding-bottom: 4px;
+  transition: color 0.3s ease;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -6px;
+  transform: translateX(-50%);
+  width: 0;
+  height: 3px;
+  background: #00e0ff;
+  border-radius: 9999px;
+  box-shadow: 0 0 8px #00e0ff;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 60%;
+}
+
+.nav-link:hover {
+  color: #CDA17A;
+}
+body {
+  margin: 0;
+}
+@font-face {
+  font-family: 'Bauhaus';
+  src: url('/fonts/Bauhaus.ttf') format('truetype'); /* Adjust path & format */
+  font-weight: normal;
+  font-style: normal;
+}
+
+#contact {
+  font-family: 'Bauhaus';
+  font-size: 1.4rem;
+}
+
